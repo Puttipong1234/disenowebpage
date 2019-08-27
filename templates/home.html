@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Diseno Thailand co,Ltd</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='template.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='card.css') }}">
+
+    
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">DISENO THAILAND</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">BIM</a></li>
+        <li><a href="#">Building Design</a></li>
+        <li><a href="#">Engineering</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- First Container -->
+<div class="container-fluid bg-1 text-center">
+  <h3 class="margin"><strong>WELCOME TO OUR SERVICE</strong></h3>
+  <img src="{{ url_for('static', filename='diseno.jpg') }}" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
+  <h2>WE ARE BUILDING DESIGN AND CONSULTANT</h2>
+
+
+</div>
+
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center">
+  <h3 >WE DESIGN AND COUNSULTING</h3>
+  <h3 class="margin">IN ARCHITECTURAL AND ENGINEERING</h3>
+  <p class="margin">With experience more than 10 YEARS 
+over 100 SUCCESSFUL building projects
+in thailand and surrounding country</p>
+  <a href="#" class="btn btn-default btn-lg">
+    <span class="glyphicon glyphicon-hand-up"></span> SEE OUR PROJECTS
+  </a>
+</div>
+
+
+<!-- Third Container (Grid) -->
+<div class="container-fluid bg-3 text-center">    
+  <h3 class="margin">CONTACT FOR OUR SERVICE</h3><br>
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card 1;" onclick="window.location='/contact';">
+  <div class="card_image"> <img src="https://www.thisiscolossal.com/wp-content/uploads/2016/10/perspective.gif" /> </div>
+  <div class="card_title title-white">
+    <h3 class="text-dark">BUILDING DESIGN</h3>
+  </div>
+</div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="card 2">
+  <div class="card_image">
+    <img src="https://www.thisiscolossal.com/wp-content/uploads/2015/02/deepblue_letters_0005_B.gif" />
+    </div>
+  <div class="card_title title-white">
+    <h3>BIM CONSULTANT</h3>
+  </div>
+</div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="card 3">
+  <div class="card_image">
+    <img src="https://cdn.dribbble.com/users/56427/screenshots/6003020/budio_hero_illustration_for_animation_2.gif" />
+  </div>
+  <div class="card_title">
+    <h3>CONSTRUCTION SERVICE</h3>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="container-fluid bg-4 text-center">
+  <p>Visit Us On Facebook <a href="https://www.facebook.com/disenothailand/">www.facebook.com/disenothailand</a></p> 
+</footer>
+
+</body>
+</html>
