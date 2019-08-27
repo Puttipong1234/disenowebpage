@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- Import the component -->
+<!-- Loads <model-viewer> for old browsers like IE11: -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='model.css') }}">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+<script nomodule
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
+</script>
+
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+
+<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+<!-- Use it like any other HTML element -->
+
+<body>
+<div class="container">
+
+<div id="card">
+    <!-- All you need to put beautiful, interactive 3D content on your site: -->
+    <model-viewer src="{{ url_for('static', filename='model/test.glb') }}" alt="A 3D model of an astronaut" auto-rotate="" camera-controls background-color="#455A64"></model-viewer>
+    <section class="attribution">
+      <span>
+        <h2>โครงการาอาคารโครงงาน กทม.PASHE 2 <strong>SIZE : 65000 SQM.</strong></h2>
+        <span>By <a href="https://www.facebook.com/disenothailand/" target="_blank">DISENO THAILAND PROJECT 27-08-2019</a></span>
+      </span>
+      <a class="cc" href="https://www.facebook.com/disenothailand/" target="_blank">
+        <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg">
+        <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg">
+      </a>
+    </section>
+    
+  </div>
+
+<div id="card">
+    <!-- All you need to put beautiful, interactive 3D content on your site: -->
+    <model-viewer src="{{ url_for('static', filename='model/test02.glb') }}" alt="A 3D model of an astronaut" auto-rotate="" camera-controls background-color="#455A64"></model-viewer>
+    <section class="attribution">
+      <span>
+        <h2>โครงการาอาคารโครงงานอาคาร คสล. 4 ชั้น <strong>SIZE : 5000 SQM.</strong></h2>
+        <span>By <a href="https://www.facebook.com/disenothailand/" target="_blank">DISENO THAILAND PROJECT 27-07-2019</a></span>
+      </span>
+      <a class="cc" href="https://www.facebook.com/disenothailand/" target="_blank">
+        <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg">
+        <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg">
+      </a>
+    </section>
+    
+  </div>
+
+
+</div>
+</body>

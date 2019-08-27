@@ -10,6 +10,10 @@ def index():
 def contact():
     return render_template('contact.html')
 
+@app.route('/model', methods = ['POST','GET'])
+def model():
+    return render_template('model.html')
+
 
 if __name__ == '__main__':
     app.run(port=200)
