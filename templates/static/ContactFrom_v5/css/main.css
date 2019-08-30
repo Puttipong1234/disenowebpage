@@ -177,6 +177,8 @@ iframe {
   align-items: center;
   padding: 15px;
   background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/static/ContactFrom_v5/images/bg-01.jpg');
+  background-repeat: no-repeat;
+
   
   
 }
