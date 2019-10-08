@@ -4,21 +4,41 @@
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='model.css') }}">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 
-<script nomodule
-    src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
-</script>
+<head>
+  <title>&lt;model-viewer&gt; example</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- The following libraries and polyfills are recommended to maximize browser support -->
+  <!-- NOTE: you must adjust the paths as appropriate for your project -->
+  
+  <!-- 🚨 REQUIRED: Web Components polyfill to support Edge and Firefox < 63 -->
+  <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
 
-<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+  <!-- 💁 OPTIONAL: Intersection Observer polyfill for better performance in Safari and IE11 -->
+  <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
 
-<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
-<!-- Use it like any other HTML element -->
+  <!-- 💁 OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
+  <script src="https://unpkg.com/resize-observer-polyfill@1.5.0/dist/ResizeObserver.js"></script>
+
+  <!-- 💁 OPTIONAL: Fullscreen polyfill is needed to fully support AR features -->
+  <script src="https://unpkg.com/fullscreen-polyfill@1.0.2/dist/fullscreen.polyfill.js"></script>
+
+  <!-- 💁 OPTIONAL: Include prismatic.js for Magic Leap support -->
+  <script src="https://unpkg.com/@magicleap/prismatic/prismatic.min.js"></script>
+  
+  <!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+  <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+
+</head> 
 
 <body>
 <div class="container">
 
 <div id="card">
     <!-- All you need to put beautiful, interactive 3D content on your site: -->
-    <model-viewer src="{{ url_for('static', filename='model/test.glb') }}" alt="โครงการอาคารโรงงาน กทม." auto-rotate="" background-color="#455A64" camera-controls ar></model-viewer>
+    <model-viewer src="{{ url_for('static', filename='model/skp01.glb') }}" alt="โครงการอาคารโรงงาน กทม." auto-rotate="" background-color="#455A64" camera-controls ar></model-viewer>
     <section class="attribution">
       <span>
         <h2>โครงการอาคารโรงงาน กทม.<strong>SIZE : 65000 SQM.</strong></h2>
@@ -32,9 +52,8 @@
     
   </div>
 
-<div id="card">
-    <!-- All you need to put beautiful, interactive 3D content on your site: -->
-    <model-viewer src="{{ url_for('static', filename='model/test02.glb') }}" alt="โครงการาอาคารโครงงานอาคาร คสล. 4 ชั้น" auto-rotate="" background-color="#455A64" camera-controls ar></model-viewer>
+<!-- <div id="card">
+    <model-viewer src="{{ url_for('static', filename='model/DPTF02.glb') }}" alt="โครงการาอาคารโครงงานอาคาร คสล. 4 ชั้น" auto-rotate="" background-color="#455A64" camera-controls ar></model-viewer>
     <section class="attribution">
       <span>
         <h2>โครงการอาคาร คสล. 4 ชั้น <strong>SIZE : 5000 SQM.</strong></h2>
@@ -49,7 +68,6 @@
   </div>
 
 <div id="card">
-    <!-- All you need to put beautiful, interactive 3D content on your site: -->
     <model-viewer src="{{ url_for('static', filename='model/test03.glb') }}" alt="โครงการอาคาร คสล. 6 ชั้น" auto-rotate="" background-color="#455A64" camera-controls ar></model-viewer>
     <section class="attribution">
       <span>
@@ -64,6 +82,29 @@
     
   </div>
 
+  <div id="card">
+    <model-viewer src="{{ url_for('static', filename='model/scene.glb') }}" alt="โครงการอาคารโรงเรียน 3 ชั้น" auto-rotate="" background-color="#455A64" camera-controls ar></model-viewer>
+    <section class="attribution">
+      <span>
+        <h2>โครงการอาคารโรงเรียน 3 ชั้น <strong>SIZE : 1000 SQM.</strong></h2>
+        <span>By <a href="https://www.facebook.com/disenothailand/" target="_blank">DISENO THAILAND PROJECT 25-09-2019</a></span>
+      </span>
+      <a class="cc" href="https://www.facebook.com/disenothailand/" target="_blank">
+        <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg">
+        <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg">
+      </a>
+    </section>
+    
+  </div> -->
+
 
 </div>
 </body>
+<script type="module"
+      src="https://unpkg.com/@google/model-viewer@v0.6.0/dist/model-viewer.js">
+  </script>
+
+  <!-- Loads <model-viewer> for old browsers like IE11: -->
+  <script nomodule
+      src="https://unpkg.com/@google/model-viewer@v0.6.0/dist/model-viewer-legacy.js">
+  </script>
